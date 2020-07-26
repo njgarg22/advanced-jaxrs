@@ -7,11 +7,11 @@ import javax.ws.rs.core.MediaType;
 
 @Path("test")
 public class MyResource {
-	
+
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	public String getMethod() {
-		return "It works!";
+	public String getMethod() {		
+		return "it works!";	
 	}
 
 }
