@@ -8,6 +8,10 @@ import javax.ws.rs.ext.ParamConverter;
 import javax.ws.rs.ext.ParamConverterProvider;
 import javax.ws.rs.ext.Provider;
 
+/**
+ * ParamConverterProvider is basically a factory for ParamConverters.
+ * It is the component that must be scanned or registered with your Application deployment class.
+ */
 @Provider
 public class MyDateConverterProvider implements ParamConverterProvider {
 
