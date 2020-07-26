@@ -7,7 +7,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-//@Singleton: Will result into error- Parameter `pathStr` and `queryStr` cannot be injected into singleton resource.
+/**
+ * Annotating `@Singleton` will result in error: Parameter `pathStr` and `queryStr` cannot be injected into singleton resource.
+ * As singleton resources are instantiated during application startup, so you can't inject request-specific info to their member variables.
+ */
 @Path("{pathParam}/test") // The `pathParam` in the `Path` annotation lets us map a resource to a variable path pattern.
 public class PathParamResource {
 	
