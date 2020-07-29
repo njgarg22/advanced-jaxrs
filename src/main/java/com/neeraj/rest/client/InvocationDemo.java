@@ -9,7 +9,7 @@ public class InvocationDemo {
 
 	public static void main(String[] args) {
 		InvocationDemo invocationDemo = new InvocationDemo();
-		Response resp = invocationDemo.prepareReqForMessagesByYear(2020).invoke();
+		Response resp = invocationDemo.prepareReqForMessagesByYear(2020).invoke(); //Invoke the request
 		System.out.println(resp.getStatus());
 
 	}
@@ -17,6 +17,7 @@ public class InvocationDemo {
 	public Invocation prepareReqForMessagesByYear(int year) {
 		Client client = ClientBuilder.newClient();
 
+		// Just prepare the request; Don't call it yet!
 		return client.target("http://localhost:8080/advanced-jaxrs/webapi/")
 				.path("messages")
 				.queryParam("year", year)
