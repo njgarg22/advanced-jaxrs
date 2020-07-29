@@ -5,6 +5,10 @@ public class Link {
 	private String link;
 	private String rel;
 	
+	public Link() {
+		
+	}
+	
 	public Link(String link, String rel) {
 		this.link = link;
 		this.rel = rel;
